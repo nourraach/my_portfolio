@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Final-Year IT Student | Information Systems Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Animated Background Shapes -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo" data-aos="fade-right">Nour RAACH</div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" data-aos="fade-left">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" aria-label="Toggle dark mode" data-aos="fade-left" data-aos-delay="100">🌙</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-aos="fade-up">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">Nour RAACH</span>
+                    </h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        <span id="typed-text"></span>
+                    </p>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
+                        Passionate about building innovative solutions with full-stack development, AI, and data engineering. 
+                        Seeking internship and international opportunities to grow my technical expertise.
+                    </p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+                        <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                            <span>View Projects</span>
+                            <i class="arrow">→</i>
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('contact')">
+                            <span>Contact Me</span>
+                            <i class="arrow">→</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Floating particles -->
+            <div class="particles">
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+                <span class="particle"></span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 data-aos="fade-up">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+                        <img src="assets/moi.jpg" alt="Profile Photo" class="profile-photo">
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="about-text" data-aos="fade-left" data-aos-delay="400">
+                        <p>
+                            I am a final-year IT student specializing in Information Systems Development at the Higher Institute 
+                            of Technological Studies (ISET) in Tunisia. With a strong foundation in software engineering and 
+                            information systems, I am passionate about creating impactful solutions.
+                        </p>
+                        <p>
+                            My passion lies in software engineering, web development, artificial intelligence, and data analysis. 
+                            I enjoy working on full-stack projects that combine backend robustness with intuitive frontend design, 
+                            and I'm particularly interested in leveraging AI and data insights to solve real-world problems.
+                        </p>
+                        <p>
+                            My career goal is to pursue internships and international opportunities that will allow me to apply 
+                            my skills in a professional environment, collaborate with experienced teams, and contribute to 
+                            meaningful projects while continuing to grow as a developer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 data-aos="fade-up">Skills & <span class="highlight">Expertise</span></h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A comprehensive overview of my technical and professional competencies</p>
+                <div class="skills-grid">
+                    <!-- Skill Card 1 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-header">
+                            <div class="skill-icon-badge">💻</div>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">Symfony</span>
+                            <span class="skill-tag">PHP</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 2 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-header">
+                            <div class="skill-icon-badge">🎨</div>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Angular</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">TypeScript</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 3 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-header">
+                            <div class="skill-icon-badge">🤖</div>
+                            <h3>AI & Machine Learning</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Supervised Learning</span>
+                            <span class="skill-tag">Unsupervised Learning</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">LangChain</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 4 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="skill-header">
+                            <div class="skill-icon-badge">🗄️</div>
+                            <h3>Databases & Big Data</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">MongoDB</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Data Warehousing</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 5 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="skill-header">
+                            <div class="skill-icon-badge">🏗️</div>
+                            <h3>Architecture & Web Services</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">SOA</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">SOAP</span>
+                            <span class="skill-tag">API Testing</span>
+                            <span class="skill-tag">SoapUI</span>
+                            <span class="skill-tag">Microservices</span>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 6 -->
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="skill-header">
+                            <div class="skill-icon-badge">🛠️</div>
+                            <h3>Tools & Methodologies</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Agile Scrum</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Maven</span>
+                            <span class="skill-tag">Jira</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section - Vertical Timeline -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 data-aos="fade-up">Professional Experience</h2>
+                <div class="experience-timeline">
+                    <!-- Experience 1 -->
+                    <article class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="experience-info">
+                                    <span class="experience-type">IT Internship</span>
+                                    <h3>National Center for Informatics</h3>
+                                    <p class="experience-position">IT Intern</p>
+                                    <p class="experience-dates">📅 Jan 2025 – Feb 2025 | Tunisia</p>
+                                    <p class="experience-description">
+                                        Developed web-based training management system with authentication and role-based access control.
+                                    </p>
+                                    <ul class="experience-highlights">
+                                        <li>Developed web-based training management system</li>
+                                        <li>Implemented authentication and role-based access control</li>
+                                        <li>Designed backend logic and database schema</li>
+                                        <li>Efficient data management solutions</li>
+                                    </ul>
+                                    <div class="experience-tech">
+                                        <span class="tech-tag">PHP</span>
+                                        <span class="tech-tag">MySQL</span>
+                                        <span class="tech-tag">REST APIs</span>
+                                        <span class="tech-tag">Git</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Experience 2 -->
+                    <article class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-card">
+                                <div class="experience-info">
+                                    <span class="experience-type">IT Internship</span>
+                                    <h3>Tunisie Télécom</h3>
+                                    <p class="experience-position">IT Intern</p>
+                                    <p class="experience-dates">📅 Jan 2024 – Feb 2024 | Tunisia</p>
+                                    <p class="experience-description">
+                                        Assisted in system installation, configuration, and maintenance with network troubleshooting support.
+                                    </p>
+                                    <ul class="experience-highlights">
+                                        <li>System installation and configuration</li>
+                                        <li>System maintenance and monitoring</li>
+                                        <li>Network troubleshooting support</li>
+                                        <li>Infrastructure management</li>
+                                    </ul>
+                                    <div class="experience-tech">
+                                        <span class="tech-tag">System Administration</span>
+                                        <span class="tech-tag">Network Management</span>
+                                        <span class="tech-tag">Infrastructure</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section - Grid Layout -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 data-aos="fade-up">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="assets/healthfit.png" alt="AI-Assisted Nutrition & Fitness Monitoring">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Full Stack Development</span>
+                            <h3>AI-Assisted Nutrition & Fitness Monitoring</h3>
+                            <p class="project-timeline">📅 Sep 2025 – Dec 2025</p>
+                            <p class="project-description">
+                                Web and mobile platform for personalized nutrition and fitness monitoring with AI vision module.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Kotlin</span>
+                                <span class="tech-tag">AI Vision</span>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-small">GitHub</a>
+                                <a href="#" class="btn btn-small">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <div class="image-placeholder">📊</div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Data Engineering & BI</span>
+                            <h3>Business Intelligence & Data Warehouse</h3>
+                            <p class="project-timeline">📅 May 2025 –June 2025</p>
+                            <p class="project-description">
+                                Enterprise data warehouse with ETL pipelines and interactive dashboards for decision-making.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">SSIS</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">ETL</span>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-small">GitHub</a>
+                                <a href="#" class="btn btn-small">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="assets/location.png" alt="Student Housing Rental Platform">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Full Stack Development</span>
+                            <h3>Student Housing Rental Platform</h3>
+                            <p class="project-timeline">📅 March 2025 – June 2025</p>
+                            <p class="project-description">
+                                Full-stack platform connecting students and property owners, developed within Agile Scrum team.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Symfony</span>
+                                <span class="tech-tag">Git</span>
+                                <span class="tech-tag">Jira</span>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-small">GitHub</a>
+                                <a href="#" class="btn btn-small">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <div class="image-placeholder">🎗️</div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Web Development</span>
+                            <h3>October Rose Awareness Website</h3>
+                            <p class="project-timeline">📅 October 2024</p>
+                            <p class="project-description">
+                                Awareness website for breast cancer prevention with educational content and event registration.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-small">GitHub</a>
+                                <a href="#" class="btn btn-small">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="assets/pokemon.png" alt="Pokémon Management Full Stack Application">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Full Stack Development</span>
+                            <h3>Pokémon Management Full Stack Application</h3>
+                            <p class="project-timeline">📅 December 2025</p>
+                            <p class="project-description">
+                                Full-stack CRUD application with authentication, authorization, and image management.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-small">GitHub</a>
+                                <a href="#" class="btn btn-small">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="assets/soa.png" alt="Cosmetics E-commerce Platform">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">SOA Architecture</span>
+                            <h3>Cosmetics E-commerce Platform</h3>
+                            <p class="project-timeline">📅 November 2025</p>
+                            <p class="project-description">
+                                Full SOA-based e-commerce platform with service-oriented architecture and microservices.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">SOA</span>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-small">GitHub</a>
+                                <a href="#" class="btn btn-small">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 7 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="assets/mongodb.png" alt="DevManager – Project Management Platform">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Project Management</span>
+                            <h3>DevManager – Project Management Platform</h3>
+                            <p class="project-timeline">📅 Oct 2025 – Dec 2025</p>
+                            <p class="project-description">
+                                Comprehensive project and task management platform for development teams with analytics.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java 17</span>
+                                <span class="tech-tag">Spring Boot 3.2</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Angular</span>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-small">GitHub</a>
+                                <a href="#" class="btn btn-small">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 data-aos="fade-up">Certifications & <span class="highlight">Credentials</span></h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Professional certifications demonstrating continuous learning and expertise</p>
+                <div class="certifications-grid">
+                    <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="cert-logo">
+                            <div class="logo-placeholder">🏆</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Database Programming with SQL</h4>
+                            <p class="cert-issuer">Oracle Academy • Dec 2024</p>
+                            <a href="#" class="cert-link">View Credential <span class="arrow-icon">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cert-logo">
+                            <div class="logo-placeholder">🔒</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Introduction to Cybersecurity Awareness</h4>
+                            <p class="cert-issuer">HP LIFE • Dec 2024</p>
+                            <a href="#" class="cert-link">View Credential <span class="arrow-icon">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="cert-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="cert-logo">
+                            <div class="logo-placeholder">🐍</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Python Essentials 1</h4>
+                            <p class="cert-issuer">Cisco • Dec 2024</p>
+                            <a href="#" class="cert-link">View Credential <span class="arrow-icon">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="cert-logo">
+                            <div class="logo-placeholder">📚</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Git and GitHub</h4>
+                            <p class="cert-issuer">365 Data Science • Nov 2024</p>
+                            <a href="#" class="cert-link">View Credential <span class="arrow-icon">↗</span></a>
+                        </div>
+                    </div>
+                    <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="cert-logo">
+                            <div class="logo-placeholder">🤖</div>
+                        </div>
+                        <div class="cert-content">
+                            <h4>Human Intelligence to Artificial Intelligence Workshop</h4>
+                            <p class="cert-issuer">ISET Radès • Oct 2024</p>
+                            <a href="#" class="cert-link">View Credential <span class="arrow-icon">↗</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clubs Section -->
+        <section id="clubs" class="clubs">
+            <div class="container">
+                <h2>Clubs & Leadership</h2>
+                <div class="clubs-list">
+                    <div class="club-item">
+                        <h4>IEEE Student Branch ISET Radès</h4>
+                        <p class="role">Member</p>
+                        <p class="dates">2024–2026</p>
+                    </div>
+                    <div class="club-item">
+                        <h4>Red Crescent ISET Radès</h4>
+                        <p class="role">Member</p>
+                        <p class="dates">2024–2025</p>
+                    </div>
+                    <div class="club-item">
+                        <h4>Enactus Club ISET Siliana</h4>
+                        <p class="role">HR Manager</p>
+                        <p class="dates">2023–2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+            <div class="container">
+                <h2>Resume</h2>
+                <p class="resume-summary">
+                    Download my comprehensive CV to learn more about my education, skills, projects, and professional experience.
+                </p>
+                <a href="assets/cv.pdf" download class="btn btn-primary">📥 Download CV</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <span class="form-message" id="formMessage"></span>
+                </form>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nour-raach-a9b6512a1/" target="_blank" rel="noopener noreferrer" class="social-icon">LinkedIn</a>
+                    <a href="https://github.com/nourraach" target="_blank" rel="noopener noreferrer" class="social-icon">GitHub</a>
+                    <a href="nourraach89@gmail.com" class="social-icon">Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-aos="fade-up">&copy; 2025 Student Name. All rights reserved.</p>
+            <div class="footer-social" data-aos="fade-up" data-aos-delay="100"></div>
+                <a href="https://www.linkedin.com/in/nour-raach-a9b6512a1/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/nourraach" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="nourraach89@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Typed.js for typing effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <!-- Main Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>
