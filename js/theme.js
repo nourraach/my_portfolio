@@ -1,12 +1,12 @@
-// Theme Toggle Script - Dark/Light mode with persistence
+// Theme Toggle Script - Dark mode by default
 
 const themeToggle = document.querySelector('.theme-toggle');
 const htmlElement = document.documentElement;
 const THEME_KEY = 'portfolio-theme';
 
-// Initialize theme from localStorage or default to light
+// Initialize theme - Always default to dark mode
 function initTheme() {
-    const savedTheme = localStorage.getItem(THEME_KEY) || 'light';
+    const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
     setTheme(savedTheme);
 }
 
@@ -24,7 +24,7 @@ function setTheme(theme) {
 
 // Toggle theme
 function toggleTheme() {
-    const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
+    const currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
 }
