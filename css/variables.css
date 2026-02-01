@@ -1,21 +1,21 @@
-/* CSS Custom Properties for Theming - Pastel Pink Theme */
+/* CSS Custom Properties for Theming - Dark Mode Only */
 
 :root {
-    /* Pastel Pink Light Mode Colors */
-    --primary-color: #FFB6C1;          /* Soft pastel pink */
-    --primary-dark: #FF9EAD;           /* Slightly darker pink */
-    --secondary-color: #FFF5F7;        /* Cream/white with pink tint */
-    --accent-color: #E6E6FA;           /* Soft lavender */
-    --accent-secondary: #F0E6FF;       /* Light lavender */
-    --text-color: #4A4A4A;             /* Soft dark gray */
-    --text-light: #7A7A7A;             /* Medium gray */
-    --bg-color: #FFFBFC;               /* Very light cream */
-    --bg-secondary: #FFF0F3;           /* Light pink background */
-    --bg-gradient-start: #FFE5EC;      /* Gradient start */
-    --bg-gradient-end: #FFF0F7;        /* Gradient end */
-    --border-color: #FFD6E0;           /* Soft pink border */
-    --shadow-color: rgba(255, 182, 193, 0.15);
-    --shadow-hover: rgba(255, 182, 193, 0.25);
+    /* Dark Mode - Muted Pastel Pink/Lavender */
+    --primary-color: #D8A7B1;          /* Muted pink */
+    --primary-dark: #C99AA4;           /* Darker muted pink */
+    --secondary-color: #2A2A2E;        /* Dark background */
+    --accent-color: #B8A7D8;           /* Muted lavender */
+    --accent-secondary: #9B8AC4;       /* Darker lavender */
+    --text-color: #E8E8E8;             /* Light gray text */
+    --text-light: #B8B8B8;             /* Medium gray text */
+    --bg-color: #1A1A1E;               /* Very dark background */
+    --bg-secondary: #252529;           /* Dark secondary background */
+    --bg-gradient-start: #2A2A2E;      /* Dark gradient start */
+    --bg-gradient-end: #1F1F23;        /* Dark gradient end */
+    --border-color: #3A3A3E;           /* Dark border */
+    --shadow-color: rgba(216, 167, 177, 0.1);
+    --shadow-hover: rgba(216, 167, 177, 0.2);
     
     /* Typography */
     --font-family: 'Poppins', 'Montserrat', sans-serif;
@@ -59,20 +59,3 @@
     --breakpoint-desktop: 1024px;
 }
 
-/* Dark Mode - Muted Pastel Pink/Lavender */
-[data-theme="dark"] {
-    --primary-color: #D8A7B1;          /* Muted pink */
-    --primary-dark: #C99AA4;           /* Darker muted pink */
-    --secondary-color: #2A2A2E;        /* Dark background */
-    --accent-color: #B8A7D8;           /* Muted lavender */
-    --accent-secondary: #9B8AC4;       /* Darker lavender */
-    --text-color: #E8E8E8;             /* Light gray text */
-    --text-light: #B8B8B8;             /* Medium gray text */
-    --bg-color: #1A1A1E;               /* Very dark background */
-    --bg-secondary: #252529;           /* Dark secondary background */
-    --bg-gradient-start: #2A2A2E;      /* Dark gradient start */
-    --bg-gradient-end: #1F1F23;        /* Dark gradient end */
-    --border-color: #3A3A3E;           /* Dark border */
-    --shadow-color: rgba(216, 167, 177, 0.1);
-    --shadow-hover: rgba(216, 167, 177, 0.2);
-}
