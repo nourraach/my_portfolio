@@ -537,14 +537,35 @@ a:hover {
 /* Skills Section */
 .skills {
     padding: var(--spacing-3xl) var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(230, 230, 250, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.skills .container {
+    position: relative;
+    z-index: 1;
 }
 
 .skills .section-subtitle {
     text-align: center;
     color: var(--text-light);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-lg);
     margin-top: calc(var(--spacing-md) * -1);
     margin-bottom: var(--spacing-3xl);
+    font-weight: var(--font-weight-normal);
 }
 
 .skills .highlight {
@@ -552,6 +573,7 @@ a:hover {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: var(--font-weight-bold);
 }
 
 .skills-cloud {
@@ -559,29 +581,36 @@ a:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: var(--spacing-md);
-    max-width: 1000px;
+    gap: var(--spacing-lg);
+    max-width: 1100px;
     margin: 0 auto;
-    padding: var(--spacing-2xl);
+    padding: var(--spacing-3xl) var(--spacing-xl);
 }
 
 .skill-badge {
     display: inline-flex;
     align-items: center;
-    padding: var(--spacing-md) var(--spacing-xl);
-    background: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(230, 230, 250, 0.15));
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 182, 193, 0.3);
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md) var(--spacing-2xl);
+    background: linear-gradient(135deg, 
+        rgba(255, 182, 193, 0.12), 
+        rgba(230, 230, 250, 0.12));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 182, 193, 0.25);
     border-radius: var(--radius-full);
     color: var(--text-color);
     font-size: var(--font-size-base);
-    font-weight: var(--font-weight-medium);
-    transition: all var(--transition-normal);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.3px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.1);
 }
 
+/* Animated gradient background */
 .skill-badge::before {
     content: '';
     position: absolute;
@@ -589,59 +618,161 @@ a:hover {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left var(--transition-slow);
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.3), 
+        transparent);
+    transition: left 0.6s ease;
 }
 
 .skill-badge:hover::before {
     left: 100%;
 }
 
+/* Glowing effect on hover */
+.skill-badge::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: var(--radius-full);
+    background: radial-gradient(circle, rgba(255, 182, 193, 0.4), transparent);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    z-index: -1;
+}
+
+.skill-badge:hover::after {
+    width: 200%;
+    height: 200%;
+}
+
 .skill-badge:hover {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     border-color: var(--primary-color);
     color: white;
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 15px 40px rgba(255, 182, 193, 0.5),
+                0 0 30px rgba(255, 182, 193, 0.3);
 }
 
-/* Varying sizes for visual interest */
-.skill-badge:nth-child(3n+1) {
-    font-size: var(--font-size-lg);
-    padding: var(--spacing-md) var(--spacing-2xl);
+/* Add sparkle icon before text */
+.skill-badge::before {
+    content: '✦';
+    font-size: 0.8em;
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.skill-badge:nth-child(5n+2) {
-    font-size: var(--font-size-sm);
-    padding: var(--spacing-sm) var(--spacing-lg);
+.skill-badge:hover::before {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+    background: none;
+    position: relative;
+    left: 0;
+    width: auto;
+    height: auto;
 }
 
-/* Subtle animation on load */
+/* Varying sizes for organic look */
+.skill-badge:nth-child(4n+1) {
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+}
+
+.skill-badge:nth-child(4n+2) {
+    font-size: 0.95rem;
+    padding: 0.7rem 1.5rem;
+}
+
+.skill-badge:nth-child(4n+3) {
+    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+}
+
+/* Staggered entrance animation */
 @keyframes float-in {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px) scale(0.9);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0) scale(1);
     }
 }
 
 .skill-badge {
-    animation: float-in 0.6s ease-out backwards;
+    animation: float-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
 
+/* Stagger delays for smooth entrance */
 .skill-badge:nth-child(1) { animation-delay: 0.05s; }
-.skill-badge:nth-child(2) { animation-delay: 0.1s; }
-.skill-badge:nth-child(3) { animation-delay: 0.15s; }
-.skill-badge:nth-child(4) { animation-delay: 0.2s; }
-.skill-badge:nth-child(5) { animation-delay: 0.25s; }
-.skill-badge:nth-child(6) { animation-delay: 0.3s; }
-.skill-badge:nth-child(7) { animation-delay: 0.35s; }
-.skill-badge:nth-child(8) { animation-delay: 0.4s; }
-.skill-badge:nth-child(9) { animation-delay: 0.45s; }
-.skill-badge:nth-child(10) { animation-delay: 0.5s; }
+.skill-badge:nth-child(2) { animation-delay: 0.08s; }
+.skill-badge:nth-child(3) { animation-delay: 0.11s; }
+.skill-badge:nth-child(4) { animation-delay: 0.14s; }
+.skill-badge:nth-child(5) { animation-delay: 0.17s; }
+.skill-badge:nth-child(6) { animation-delay: 0.20s; }
+.skill-badge:nth-child(7) { animation-delay: 0.23s; }
+.skill-badge:nth-child(8) { animation-delay: 0.26s; }
+.skill-badge:nth-child(9) { animation-delay: 0.29s; }
+.skill-badge:nth-child(10) { animation-delay: 0.32s; }
+.skill-badge:nth-child(11) { animation-delay: 0.35s; }
+.skill-badge:nth-child(12) { animation-delay: 0.38s; }
+.skill-badge:nth-child(13) { animation-delay: 0.41s; }
+.skill-badge:nth-child(14) { animation-delay: 0.44s; }
+.skill-badge:nth-child(15) { animation-delay: 0.47s; }
+.skill-badge:nth-child(16) { animation-delay: 0.50s; }
+.skill-badge:nth-child(17) { animation-delay: 0.53s; }
+.skill-badge:nth-child(18) { animation-delay: 0.56s; }
+.skill-badge:nth-child(19) { animation-delay: 0.59s; }
+.skill-badge:nth-child(20) { animation-delay: 0.62s; }
+
+/* Subtle floating animation */
+@keyframes gentle-float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.skill-badge:nth-child(3n) {
+    animation: float-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards,
+               gentle-float 3s ease-in-out infinite;
+}
+
+.skill-badge:nth-child(3n+1) {
+    animation: float-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards,
+               gentle-float 4s ease-in-out infinite;
+}
+
+.skill-badge:nth-child(3n+2) {
+    animation: float-in 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards,
+               gentle-float 3.5s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-cloud {
+        gap: var(--spacing-md);
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+    
+    .skill-badge {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+    
+    .skill-badge:nth-child(4n+1) {
+        font-size: 1rem;
+        padding: 0.7rem 1.4rem;
+    }
+}
 
 /* Projects Section - Simple Grid */
 .projects {
